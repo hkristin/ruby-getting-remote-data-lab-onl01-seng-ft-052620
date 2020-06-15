@@ -21,8 +21,8 @@ class GetRequester
   def parse_json
     programs = JSON.parse(self.get_response_body)
   programs.collect do |program|
-   { program["name"]  
-    program["occupation"] }
+   {name: program["name"],
+    occupation: program["occupation"]}
   end
   end
 end
